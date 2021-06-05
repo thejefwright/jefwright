@@ -22,8 +22,10 @@ const MobileStyles = styled.div`
   color: white;
   font-size: 2rem;
   clip-path: circle(30px at 50% 95%);
+  -webkit-clip-path: circle(30px at 50% 95%);
   box-shadow: -1px 1px 5px wheat;
   z-index: 1;
+  ${(props) => props.open && `clip-path: circle(100% at 50% 50%);`};
   ${(props) => props.open && `-webkit-clip-path: circle(100% at 50% 50%);`};
   ${(props) => props.open && `box-shadow: none;`};
   transition: all 0.4s;
