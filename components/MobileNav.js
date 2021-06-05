@@ -25,6 +25,7 @@ const MobileStyles = styled.div`
   box-shadow: -1px 1px 5px wheat;
   z-index: 1;
   ${(props) => props.open && `clip-path: circle(100% at 50% 50%);`};
+  ${(props) => props.open && `-webkit-clip-path: circle(100% at 50% 50%);`};
   ${(props) => props.open && `box-shadow: none;`};
   transition: all 0.4s;
 
