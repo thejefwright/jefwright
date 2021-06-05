@@ -35,9 +35,7 @@ body {
   font-weight: 300;
   padding: 0 ;
   margin: 0;
-  /* background-color: var(--background); */
-  background: url(Graphpaper.png), var(--background);
-  background-size: contain;
+  background: var(--background);
 }
 
 
