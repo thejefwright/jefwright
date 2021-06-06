@@ -5,7 +5,7 @@ const HomeStyles = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   color: var(--words);
   font-size: 3.5rem;

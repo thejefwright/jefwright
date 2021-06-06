@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const HamburgerStyles = styled.div`
   position: relative;
-  top: 95%;
+  top: 90%;
   margin: 0 auto;
   background: var(--words);
   width: 25px;

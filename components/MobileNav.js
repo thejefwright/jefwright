@@ -6,14 +6,13 @@ import Nav from './Nav';
 const MobileStyles = styled.div`
   position: fixed;
   top: 0;
-  bottom: 2rem;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background: var(--pop);
   color: white;
   font-size: 2rem;
-  clip-path: circle(30px at 50% 95%);
-  -webkit-clip-path: circle(30px at 50% 95%);
+  clip-path: circle(30px at 50% 90%);
+  -webkit-clip-path: circle(30px at 50% 90%);
   ${(props) => props.open && `clip-path: circle(100% at 50% 50%);`};
   ${(props) => props.open && `-webkit-clip-path: circle(100% at 50% 50%);`};
   transition: all 0.4s;
