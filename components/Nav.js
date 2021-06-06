@@ -10,10 +10,10 @@ const NavStyles = styled.ul`
   li {
     padding: 1rem 0;
     cursor: pointer;
-    transform: translateY(300%);
+    transform: translateY(1000%);
     opacity: 0;
     transition: all 0.6s;
-    ${(props) => props.open && `transform: translateY(0%);`};
+    ${(props) => props.open && `transform: translateY(200%);`};
     ${(props) => props.open && `opacity: 1;`};
   }
 `;
