@@ -14,12 +14,10 @@ const MobileStyles = styled.div`
   font-size: 2rem;
   clip-path: circle(30px at 50% 95%);
   -webkit-clip-path: circle(30px at 50% 95%);
-  pointer-events: none;
   box-shadow: -1px 1px 5px wheat;
   z-index: 1;
   ${(props) => props.open && `clip-path: circle(100% at 50% 50%);`};
   ${(props) => props.open && `-webkit-clip-path: circle(100% at 50% 50%);`};
-  ${(props) => props.open && `pointer-events: auto;`};
   transition: all 0.4s;
 
   .wrapper {
