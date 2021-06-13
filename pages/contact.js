@@ -17,11 +17,25 @@ const ContactStyles = styled.div`
   input,
   textarea {
     margin-bottom: 1rem;
+    font-size: 1.6rem;
     width: 100%;
+    background: white;
   }
   button {
     display: block;
     width: 100%;
+    border: 1px solid var(--pop);
+    color: var(--pop);
+    background: white;
+    font-size: 2rem;
+    border-radius: 30px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    :hover {
+      background: var(--pop);
+      color: var(--words);
+    }
   }
 `;
 
@@ -29,7 +43,7 @@ export default function Contact() {
   return (
     <ContactStyles>
       <h1>Contact Me!</h1>
-      <form name="contact" data-netlify="true" method="POST">
+      <form name="contact" data-netlify="true" method="POST" action="/thanks">
         <input type="hidden" name="form-name" value="contact" />
         <label>Name:</label>
         <input placeholder="Name" type="text" name="name" />
@@ -42,7 +56,7 @@ export default function Contact() {
           name="message"
           rows="6"
         ></textarea>
-        <button type="submit">Send</button>
+        <button type="submit">Send It!</button>
       </form>
     </ContactStyles>
   );
