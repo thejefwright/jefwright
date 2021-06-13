@@ -16,6 +16,7 @@ const ContactStyles = styled.div`
   }
   input,
   textarea {
+    border: none;
     font-family: inherit;
     margin-bottom: 1rem;
     font-size: 1.6rem;
