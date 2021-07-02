@@ -22,7 +22,7 @@ export default function Nav({ open }) {
   return (
     <NavStyles open={open} className="navList">
       <li>
-        <Link className="link" href="/projects">
+        <Link className="link" href="/work">
           <a>Projects</a>
         </Link>
       </li>

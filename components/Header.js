@@ -39,6 +39,7 @@ const HeaderStyles = styled.div`
     border-bottom: 1px solid transparent;
     padding: 0 3rem;
     transition: all 0.5s;
+    transform-origin: center;
   }
   li:hover {
     border-bottom: 1px solid var(--words);
@@ -53,7 +54,7 @@ export default function Header() {
       </div>
       <ul>
         <li>
-          <Link className="link" href="/projects">
+          <Link className="link" href="/work">
             <a>Projects</a>
           </Link>
         </li>
