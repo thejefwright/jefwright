@@ -36,14 +36,26 @@ const HeaderStyles = styled.div`
     }
   }
   li {
-    border-bottom: 1px solid transparent;
+    /* border-bottom: 1px solid transparent; */
+    position: relative;
     padding: 0 3rem;
     transition: all 0.5s;
     transform-origin: center;
   }
-  li:hover {
-    border-bottom: 1px solid var(--words);
-    transform: scale(1.1);
+
+  li::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 0;
+    background: var(--words);
+    bottom: -2px;
+    left: 50%;
+    transition: all 0.3s;
+  }
+  li:hover::after {
+    width: 100%;
+    left: 0;
   }
 `;
 export default function Header() {
