@@ -36,7 +36,6 @@ const HeaderStyles = styled.div`
     }
   }
   li {
-    /* border-bottom: 1px solid transparent; */
     position: relative;
     padding: 0 3rem;
     transition: all 0.5s;
@@ -51,7 +50,7 @@ const HeaderStyles = styled.div`
     background: var(--words);
     bottom: -2px;
     left: 50%;
-    transition: all 0.3s;
+    transition: all 0.2s;
   }
   li:hover::after {
     width: 100%;
