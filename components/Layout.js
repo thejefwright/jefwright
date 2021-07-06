@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import styled, { createGlobalStyle } from 'styled-components';
 import Header from './Header';
 import MobileNav from './MobileNav';
@@ -53,6 +54,9 @@ const InnerStyles = styled.div`
 export default function Layout({ children }) {
   return (
     <div>
+      <Head>
+        <title>Jef Wright</title>
+      </Head>
       <GlobalStyles />
       <Header />
       <MobileNav />
