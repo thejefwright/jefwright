@@ -32,7 +32,7 @@
           [
             "styled-components",
             {
-              "ssr": true,
+              "ssr": false,
               "displayName": true
             }
           ]
@@ -46,7 +46,7 @@
           [
             "styled-components",
             {
-              "ssr": true,
+              "ssr": false,
               "displayName": true
             }
           ]
