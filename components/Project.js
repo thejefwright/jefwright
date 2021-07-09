@@ -5,8 +5,7 @@ const ProjectStyles = styled.div`
   border: 1px solid var(--pop);
   color: var(--words);
   padding: 1rem 2rem;
-  margin: 1rem auto;
-  max-width: 1000px;
+  min-height: 400px;
 
   ul {
     display: flex;
@@ -18,22 +17,13 @@ const ProjectStyles = styled.div`
   }
 `;
 
-export default function Project({ allPost }) {
+export default function Project({ project }) {
   return (
-    <div>
-      {allPost.map((project) => (
-        <ProjectStyles key={project._id}>
-          <a href={`https://${project.link}`} target="_blank">
-            <h2>{project.title}</h2>
-          </a>
-          <BlockContent blocks={project.bodyRaw} />
-          <ul>
-            {project.categories?.map((category) => (
-              <li key={category._id}>{category.title}</li>
-            ))}
-          </ul>
-        </ProjectStyles>
-      ))}
-    </div>
+    <ProjectStyles>
+      <a href={`https://${project.link}`} target="_blank">
+        <h2>{project.title}</h2>
+      </a>
+      <BlockContent blocks={project.bodyRaw} />
+    </ProjectStyles>
   );
 }
