@@ -8,6 +8,18 @@ const WorkStyles = styled.div`
   width: 100%;
   font-size: 2rem;
   color: var(--words);
+  hr {
+    margin: 5rem 0;
+    border: 0;
+    height: 1px;
+    background: var(--words);
+    background-image: linear-gradient(
+      to right,
+      var(--background),
+      var(--words),
+      var(--background)
+    );
+  }
 `;
 
 const ProjectGridStyles = styled.div`
@@ -43,14 +55,24 @@ export default function Work({ allPost, allCategory }) {
       </ProjectGridStyles>
       <hr />
       <div>
+        <p>Currently working on: </p>
+        <ul>
+          <li>
+            Inventory management app with a dedicated backend and pulling info
+            from the Shopify admin api.{' '}
+          </li>
+        </ul>
+      </div>
+      <hr />
+      <div>
         <p>Other projects I've built include: </p>
         <ul>
           <li>Headless Wordpress</li>
           <li>Headless Shopify ( I ❤️ headless )</li>
           <li>Food cost tracking app</li>
+
           <li>
-            Inventory management app with a dedicated backend and pulling info
-            from the Shopify admin api.{' '}
+            Lots of regular custom shopify, wordpress, and squarspace sites.{' '}
           </li>
         </ul>
       </div>
