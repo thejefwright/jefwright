@@ -56,7 +56,11 @@ export default function Layout({ children }) {
     <div>
       <Head>
         <title>Jef Wright</title>
-        <meta property="og:image" content="/screeShot.png" key="ogimage" />
+        <meta
+          property="og:image"
+          content="/public/screeShot.png"
+          key="ogimage"
+        />
       </Head>
       <GlobalStyles />
       <Header />
