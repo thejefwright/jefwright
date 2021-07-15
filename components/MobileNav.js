@@ -11,11 +11,12 @@ const MobileStyles = styled.div`
   background: var(--pop);
   color: white;
   font-size: 2rem;
-  clip-path: circle(30px at 50% 90%);
-  -webkit-clip-path: circle(30px at 50% 90%);
+  clip-path: circle(30px at 50% 95%);
+  -webkit-clip-path: circle(30px at 50% 95%);
   ${(props) => props.open && `clip-path: circle(100% at 50% 50%);`};
   ${(props) => props.open && `-webkit-clip-path: circle(100% at 50% 50%);`};
   transition: all 0.4s;
+  z-index: 2;
 
   @media (min-width: 801px) {
     display: none;
