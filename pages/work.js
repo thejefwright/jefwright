@@ -24,7 +24,7 @@ const WorkStyles = styled.div`
 
 const ProjectGridStyles = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   justify-items: center;
   gap: 2rem;
 `;
@@ -42,6 +42,14 @@ const ListStyles = styled.ul`
     &:hover {
       transform: scale(1.1);
     }
+  }
+  @media (max-width: 800px) {
+    font-size: 1.75rem;
+    max-width: 80%;
+  }
+  @media (max-width: 500px) {
+    font-size: 1.5rem;
+    max-width: 100%;
   }
 `;
 export default function Work({ allPost, allCategory }) {

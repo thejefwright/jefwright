@@ -31,6 +31,7 @@ const ProjectStyles = styled.div`
   h2 {
     position: relative;
     font-weight: 300;
+    white-space: nowrap;
   }
   h2::after {
     content: '';
