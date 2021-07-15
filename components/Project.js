@@ -53,7 +53,6 @@ const ProjectStyles = styled.div`
 `;
 
 export default function Project({ project }) {
-  console.log(project.mainImage);
   return (
     <ProjectStyles>
       <a href={`https://${project.link}`} target="_blank">
