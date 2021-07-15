@@ -46,9 +46,7 @@ a {
   color: inherit;
   text-decoration: none;
 }
-a:hover {
-  text-decoration: underline 1px var(--words);
-}
+
 `;
 
 const InnerStyles = styled.div`
