@@ -38,11 +38,16 @@ body {
   margin: 0;
   background: var(--background);
 }
-
+h1 {
+  font-weight: 500;
+}
 
 a {
   color: inherit;
   text-decoration: none;
+}
+a:hover {
+  text-decoration: underline 1px var(--words);
 }
 `;
 
