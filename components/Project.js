@@ -29,7 +29,22 @@ const ProjectStyles = styled.div`
     opacity: 1;
   }
   h2 {
+    position: relative;
     font-weight: 300;
+  }
+  h2::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 0;
+    background: var(--words);
+    bottom: 0px;
+    left: 50%;
+    transition: all 0.2s;
+  }
+  h2:hover::after {
+    width: 100%;
+    left: 0;
   }
   img {
     width: 100%;
