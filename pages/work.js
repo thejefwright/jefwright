@@ -47,7 +47,7 @@ const ListStyles = styled.ul`
 export default function Work({ allPost, allCategory }) {
   return (
     <WorkStyles>
-      <h1>Work Page!</h1>
+      <h1>Featured Projects</h1>
       <ProjectGridStyles>
         {allPost.map((project) => (
           <Project key={project._id} project={project} />
@@ -98,6 +98,11 @@ export async function getStaticProps() {
           bodyRaw
           _id
           link
+          mainImage {
+            asset {
+              url
+            }
+          }
         }
       }
     `,

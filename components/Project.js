@@ -8,7 +8,8 @@ const ProjectStyles = styled.div`
   padding: 1rem 2rem;
   min-height: 400px;
   border: 1px solid var(--pop);
-  box-shadow: inset 0 0 0.5em 0 var(--pop), 0 0 0.5em 0 var(--pop);
+  box-shadow: 0 0 0.5em 0 var(--pop);
+  transition: transform 0.3s;
 
   ::after {
     content: '';
@@ -18,30 +19,32 @@ const ProjectStyles = styled.div`
     left: 0;
     right: 0;
     border-radius: 1em;
-    box-shadow: 0 0 5em 0.125em var(--pop);
+    box-shadow: 0 0 50px 2px var(--pop);
     opacity: 0;
     transition: all 0.3s;
+    z-index: -1;
   }
+
   &:hover::after {
     opacity: 1;
   }
-
-  ul {
-    display: flex;
+  h2 {
+    font-weight: 300;
   }
-  li {
-    margin: 0 2rem;
-    list-style: none;
-    border-bottom: 1px solid var(--pop);
+  img {
+    width: 100%;
+    border: 1px solid var(--words);
   }
 `;
 
 export default function Project({ project }) {
+  console.log(project.mainImage);
   return (
     <ProjectStyles>
       <a href={`https://${project.link}`} target="_blank">
         <h2>{project.title}</h2>
       </a>
+      <img src={project.mainImage?.asset.url} alt="" />
       <BlockContent blocks={project.bodyRaw} />
     </ProjectStyles>
   );
