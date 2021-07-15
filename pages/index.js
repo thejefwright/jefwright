@@ -46,14 +46,17 @@ const HomeStyles = styled.div`
 
 export default function Home() {
   return (
-    <HomeStyles>
-      <div className="name">
-        <h1>Jef</h1>
-        <h1 className="last">Wright</h1>
-      </div>
-      <p className="tag">I create amazing online experiences</p>
-      <p className="title">Web Developer | Portland, ME</p>
-      <p className="big">Wow, that's a big monitor!</p>
-    </HomeStyles>
+    <>
+      <HomeStyles>
+        <div className="name">
+          <h1>Jef</h1>
+          <h1 className="last">Wright</h1>
+        </div>
+
+        <p className="tag">I create amazing online experiences</p>
+        <p className="title">Web Developer | Portland, ME</p>
+        <p className="big">Wow, that's a big monitor!</p>
+      </HomeStyles>
+    </>
   );
 }
