@@ -46,6 +46,9 @@ a {
   color: inherit;
   text-decoration: none;
 }
+p {
+  font-size: 1.75rem;
+}
 
 `;
 
