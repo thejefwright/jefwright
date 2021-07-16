@@ -6,9 +6,6 @@ const AboutStyles = styled.div`
   margin: auto;
   color: var(--words);
   font-size: 2rem;
-  p {
-    font-size: 1.75rem;
-  }
 `;
 
 export default function About() {
