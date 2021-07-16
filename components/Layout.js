@@ -63,6 +63,7 @@ export default function Layout({ children }) {
       <Head>
         <title>Jef Wright</title>
         <meta property="og:image" content="/screenShot.png" key="ogimage" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <GlobalStyles />
       <Header />
