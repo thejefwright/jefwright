@@ -1,7 +1,9 @@
-import { gql } from '@apollo/client';
-import client from '../apollo-client';
+// import { gql } from '@apollo/client';
+// import client from '../apollo-client';
 import styled from 'styled-components';
 import Project from '../components/Project';
+import sanity from '../client';
+import groq from 'groq';
 
 const WorkStyles = styled.div`
   height: 100vh;
@@ -52,12 +54,12 @@ const ListStyles = styled.ul`
     max-width: 100%;
   }
 `;
-export default function Work({ allPost, allCategory }) {
+export default function Work({ projects, categories }) {
   return (
     <WorkStyles>
       <h1>Featured Projects</h1>
       <ProjectGridStyles>
-        {allPost.map((project) => (
+        {projects.map((project) => (
           <Project key={project._id} project={project} />
         ))}
       </ProjectGridStyles>
@@ -88,7 +90,7 @@ export default function Work({ allPost, allCategory }) {
       <div>
         <p>Other tech I've used/like to use: </p>
         <ListStyles>
-          {allCategory.map((category) => (
+          {categories.map((category) => (
             <li key={category._id}>{category.title}</li>
           ))}
         </ListStyles>
@@ -98,38 +100,19 @@ export default function Work({ allPost, allCategory }) {
 }
 
 export async function getStaticProps() {
-  const { data: projectData } = await client.query({
-    query: gql`
-      query PROJECT_QUERY {
-        allPost {
-          title
-          bodyRaw
-          _id
-          link
-          mainImage {
-            asset {
-              url
-            }
-          }
-        }
-      }
-    `,
-  });
-  const { data: categoryData } = await client.query({
-    query: gql`
-      query CATEGORY_QUERY {
-        allCategory {
-          title
-          _id
-        }
-      }
-    `,
-  });
+  const query = groq`
+  {
+    "projects": *[_type == 'post'],
+    "categories": *[_type == 'category']
+  }
+  `;
+
+  const data = await sanity.fetch(query);
 
   return {
     props: {
-      allPost: projectData.allPost,
-      allCategory: categoryData.allCategory,
+      projects: data.projects,
+      categories: data.categories,
     },
   };
 }

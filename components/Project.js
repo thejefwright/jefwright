@@ -1,5 +1,12 @@
 import styled from 'styled-components';
 import BlockContent from '@sanity/block-content-to-react';
+import imageUrlBuilder from '@sanity/image-url';
+import sanity from '../client';
+
+const builder = imageUrlBuilder(sanity);
+function urlFor(source) {
+  return builder.image(source);
+}
 
 const ProjectStyles = styled.div`
   position: relative;
@@ -59,8 +66,11 @@ export default function Project({ project }) {
       <a href={`https://${project.link}`} target="_blank">
         <h2>{project.title}</h2>
       </a>
-      <img src={project.mainImage?.asset.url} alt="" />
-      <BlockContent blocks={project.bodyRaw} />
+      <img
+        src={urlFor(project.mainImage.asset._ref).url()}
+        alt={project.title}
+      />
+      <BlockContent blocks={project.body} />
     </ProjectStyles>
   );
 }
