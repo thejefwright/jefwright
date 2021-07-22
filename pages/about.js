@@ -5,7 +5,9 @@ const AboutStyles = styled.div`
   width: 80%;
   margin: auto;
   color: var(--words);
-  font-size: 2rem;
+  h1 {
+    font-size: 5rem;
+  }
 `;
 
 export default function About() {
