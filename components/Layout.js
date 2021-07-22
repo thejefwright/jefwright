@@ -54,7 +54,7 @@ p {
 
 const InnerStyles = styled.div`
   /* margin: 10rem auto; */
-  padding: 0 2rem;
+  /* padding: 0 2rem; */
 `;
 
 export default function Layout({ children }) {
