@@ -13,7 +13,7 @@ const ContactStyles = styled.div`
 const FormStyles = styled.form`
   label {
     display: block;
-    padding: 1rem 0;
+    padding-top: 1rem;
     font-size: 1.75rem;
   }
   input,
