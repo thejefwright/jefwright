@@ -4,11 +4,11 @@ import styled from 'styled-components';
 const HomeStyles = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   height: 100vh;
   width: 100%;
   color: var(--words);
   font-size: 3.5rem;
+  padding: 0 2rem;
 
   .name {
     padding-top: 2rem;
