@@ -14,8 +14,8 @@ const ProjectStyles = styled.div`
   color: var(--words);
   padding: 1rem 2rem;
   min-height: 400px;
-  border: 1px solid var(--pop);
-  box-shadow: 0 0 0.5em 0 var(--pop);
+  border: 2px solid var(--pop);
+  /* box-shadow: 0 0 0.5em 0 var(--pop); */
   transition: transform 0.3s;
 
   ::after {
@@ -38,7 +38,7 @@ const ProjectStyles = styled.div`
   h2 {
     position: relative;
     font-weight: 300;
-    white-space: nowrap;
+    /* white-space: nowrap; */
   }
   h2::after {
     content: '';

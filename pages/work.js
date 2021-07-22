@@ -1,5 +1,3 @@
-// import { gql } from '@apollo/client';
-// import client from '../apollo-client';
 import styled from 'styled-components';
 import Project from '../components/Project';
 import sanity from '../client';
@@ -7,9 +5,13 @@ import groq from 'groq';
 
 const WorkStyles = styled.div`
   height: 100vh;
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
   font-size: 2rem;
   color: var(--words);
+  h1 {
+    font-size: 5rem;
+  }
   hr {
     margin: 5rem 0;
     border: 0;
@@ -27,8 +29,11 @@ const WorkStyles = styled.div`
 const ProjectGridStyles = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-  justify-items: center;
   gap: 2rem;
+
+  @media (max-width: 500px) {
+    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+  }
 `;
 
 const ListStyles = styled.ul`
