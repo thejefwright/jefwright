@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const AboutStyles = styled.div`
-  height: 100%;
+  height: 100vh;
   width: 80%;
   margin: auto;
   color: var(--words);

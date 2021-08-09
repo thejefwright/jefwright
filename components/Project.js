@@ -26,7 +26,7 @@ const ProjectStyles = styled.div`
     left: 0;
     right: 0;
     border-radius: 1em;
-    box-shadow: 0 0 50px 2px var(--pop);
+    box-shadow: 0 0 25px 2px var(--pop);
     opacity: 0;
     transition: all 0.3s;
     z-index: -1;
