@@ -5,4 +5,5 @@ export default sanityClient({
   dataset: 'production',
   useCdn: true,
   watchMode: true,
+  apiVersion: '2021-03-25',
 });
