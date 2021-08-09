@@ -15,11 +15,11 @@ const GlobalStyles = createGlobalStyle`
     font-weight: 300;
   }
 :root {
-  --background: linear-gradient(180deg, rgba(203,115,0,1) 0%, rgba(255,119,0,1) 50%, rgba(245,206,122,1) 100%);
   --background: #282828;
-  --background-solid: rgb(203,115,0);
   --pop: purple;
-  --words: wheat;
+  --words: whitesmoke;
+  --background: #193549;
+  --pop: #ff9d00;
 }
 *,
 *::before,
