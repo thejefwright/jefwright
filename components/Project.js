@@ -67,7 +67,7 @@ export default function Project({ project }) {
         <h2>{project.title}</h2>
       </a>
       <img
-        src={urlFor(project.mainImage.asset._ref).url()}
+        src={urlFor(project.mainImage).sharpen(50).url()}
         alt={project.title}
       />
       <BlockContent blocks={project.body} />
