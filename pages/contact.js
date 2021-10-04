@@ -58,15 +58,16 @@ export default function Contact() {
       >
         <input type="hidden" name="form-name" value="contact" />
         <label>Name:</label>
-        <input placeholder="Name" type="text" name="name" />
+        <input placeholder="Name" type="text" name="name" required />
 
         <label>Email:</label>
-        <input placeholder="Email" type="email" name="email" />
+        <input placeholder="Email" type="email" name="email" required />
         <label>Message:</label>
         <textarea
           placeholder="How Can I Help?"
           name="message"
           rows="6"
+          required
         ></textarea>
         <button type="submit">Send It!</button>
       </FormStyles>
